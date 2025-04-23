@@ -26,7 +26,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     try {
       Position position = await determinePosition();
       final response = await Dio().get(
-          "https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid={replace-with-you-api-key}");
+          "https://api.openweathermap.org/data/2.5/weather?lat=${position.latitude}&lon=${position.longitude}&appid={replace-with-your-api-key}");
       setState(() {
         apiState = ApiState.success;
         weatherData = WeatherData.fromMap(response.data);
